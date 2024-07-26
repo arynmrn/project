@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>گرشا رضایی</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fontawesome/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/v4-shims.min.css" integrity="sha512-p++g4gkFY8DBqLItjIfuKJPFvTPqcg2FzOns2BNaltwoCOrXMqRIOqgWqWEvuqsj/3aVdgoEo2Y7X6SomTfUPA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.2/css/font-awesome.min.css" integrity="sha512-YgECeaX64EiXmgxPQZ88zsywLJBLNfuY1IpQiR6OXyLpEgLPXZq2JnfnTaHaAZ+1ADF3PzI2I8ma/ixR1jJUMg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="hover.css">
+    <style>
+        @font-face{font-family:'estedad';src:url('fonts/estedad.woff') format('woff')}
+        *{
+            margin:0;
+            padding:0;
+            border:none;
+            outline:none;
+            list-style-type: none;
+            text-decoration: none;
+            font-family: estedad;
+        }
+        :root{
+            scroll-behavior: smooth;
+        }
+        body{
+            background: #f4f7ff;
+        }
+        .circles{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width:100%;
+            height:70%;
+            overflow: hidden;
+            z-index:-1;
+        }
+
+        .circles li{
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            animation: animate 25s linear infinite;
+            bottom: -150px;
+            z-index:-1;
+            border:3px solid #5f27cd;
+            border-radius:34px !important;
+
+        }
+
+        .circles li:nth-child(1){
+            box-shadow:0 0 12px #ccc;
+            left: 65%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+            border-radius:1px !important;
+            background:none;
+        }
+
+
+        .circles li:nth-child(2){
+            left: 10%;
+            box-shadow:0 0 12px #ccc;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+            background:none;
+            border-radius:1px !important;
+        }
+
+        .circles li:nth-child(3){
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 4s;
+            background:#5f27cd;
+        }
+
+        .circles li:nth-child(4){
+            left: 40%;
+            box-shadow:0 0 12px #ccc;
+            background:#5f27cd;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+            animation-duration: 18s;
+            border:3px solid #5f27cd;
+        }
+
+        .circles li:nth-child(5){
+            left: 65%;
+            box-shadow:0 0 12px #ccc;
+            width: 20px;
+            height: 20px;
+            background:#5f27cd;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(6){
+            left: 75%;
+            width: 110px;
+            height: 110px;
+            animation-delay: 3s;
+            background:none;
+            border-radius:1px !important;
+        }
+
+        .circles li:nth-child(7){
+            left: 35%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 7s;
+        }
+
+        .circles li:nth-child(8){
+            left: 50%;
+            box-shadow:0 0 12px #ccc;
+            width: 25px;
+            height: 25px;
+            animation-delay: 15s;
+            animation-duration: 45s;
+        }
+
+        .circles li:nth-child(9){
+            left: 20%;
+            box-shadow:0 0 12px #ccc;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 35s;
+        }
+
+        .circles li:nth-child(10){
+            left: 15%;
+            box-shadow:0 0 12px #ccc;
+            width: 120px;
+            height: 120px;
+            animation-delay: 0s;
+            animation-duration: 11s;
+        }
+
+
+
+        @keyframes animate {
+
+            0%{
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+            }
+
+            100%{
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0.5;
+                border-radius: 50%;
+            }
+
+        }
+        .navbar{
+            width:100%;
+            padding: 30px 44px;
+            direction: rtl;
+        }
+        .navbar ul li{
+            margin: 2px 15px;
+            display: inline-block;
+        }
+        .navbar ul li a{
+            text-decoration: none;
+            color: #939291;
+            font-size: 17px;
+            transition: 0.3s ease-in-out;
+        }
+        .navbar ul li a:hover{
+            color: #5f27cd;
+        }
+        .navbar .active{
+            border: 2px solid #603cff;
+            border-radius: 8px;
+            padding: 15px
+        }
+        #leftbar{
+            margin-right: 32%;
+            border: 2px solid #5f27cd;
+            padding: 6px 22px;
+            border-radius: 25px;
+            transition: 0.3s ease-in-out;
+        }
+        #leftbar:hover{
+            background: #5f27cd;
+        }
+        #leftbar:hover a{
+            color:#fff;
+        }
+        .head img{
+            width: 40%;
+            border-radius: 8px;
+        }
+        #presale{
+            position: relative;
+            margin: 80px auto;
+        }
+        .detail{
+            width: 22%;
+            margin: 10px 1%;
+            border-radius: 14px;
+            padding: 18px;
+            box-shadow: 0 0 3px #939291;
+            display: inline-block;
+            background: #fff;
+        }
+        .detail img{
+            width: 80%;
+        }
+        .detail button{
+            border-radius: 30px;
+            padding: 12px;
+            width: 100%;
+            color: #fff;
+            background: #5f27cd;
+            margin: 10px auto;
+            transition: 0.3s ease-in-out;
+        }
+        .detail button:hover{
+            box-shadow: 0 0 12px #939291;
+        }
+        .circle:nth-child(1){
+            background: #5f27cd;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            z-index: -1;
+            top:-40px;
+            left:40%;
+        }
+        .circle:nth-child(4){
+            background: #5f27cd;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            z-index: -1;
+            top: -30px;
+            left:37%;
+        }
+        .circle:nth-child(2){
+            background: #5f27cd;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            z-index: -1;
+            left: 12%;
+            top:-6px;
+        }
+        .circle:nth-child(3){
+            background: #5f27cd;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            z-index: -1;
+            right: 13%;
+        }
+        footer{
+            background: #fff;
+            padding: 20px;
+            float: right;
+            direction: rtl;
+            width: 100%;
+        }
+        footer .menu{
+            width: 98%;
+        }
+        footer .menu .links{
+            width: 45%;
+            float: right;
+        }
+        footer .menu .social{
+            width: 45%;
+            float: left;
+        }
+        .menu ul a{
+            color:#939291;
+            transition: 0.3s ease-in-out;
+            text-decoration: none;
+        }
+        .menu ul a:hover{
+            color: #252525;
+        }
+        .links b{
+            color: #000;
+            font-size: 19px;
+            margin: 10px auto;
+            display: block;
+        }
+        .links li{
+            margin: 5px;
+            display: block;
+        }
+        .social b{
+            color: #000;
+            font-size: 19px;
+            margin: 10px auto;
+            display: block;
+        }
+        .social li{
+            margin: 5px;
+            display: block;
+        }
+        .social li img{
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ced4da; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #adb5bd; 
+}
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar">
+        <ul>
+            <li class="hvr-ripple-out active"><a href="#">صفحه اصلی</a></li>
+            <li class="hvr-ripple-out"><a href="#">گالری</a></li>
+            <li class="hvr-ripple-out"><a href="#">کانون هوادار</a></li>
+            <li class="hvr-ripple-out"><a href="#">بیوگرافی</a></li>
+            <li class="hvr-ripple-out"><a href="#">ارتباط با ما</a></li>
+
+            <li id="leftbar"><a href="#">ثبت نام در کانون هواداری</a></li>
+        </ul>
+    </nav>
+    <section class="head">
+        <center>
+            <h3 style="margin: 30px;font-size: 29px;"><b>Garsha Rezaei</b></h3>
+            <img src="img/1263455_465.jpg" alt="گرشا رضایی" /></center>
+    </section>
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <center><h4 style="cursor: pointer;font-size: 18px;margin: 50px auto" onclick="window.location.href = '#presale'">پیش فروش آلبوم ها <br><i class="fas fa-angle-double-down"></i></h4></center>
+
+    <center><section id="presale">
+        <span class="circle">
+
+        </span>
+        <span class="circle">
+
+        </span>
+        <span class="circle">
+
+        </span>
+        <span class="circle">
+
+        </span>
+        <div class="detail">
+            <center><h4>آلبوم شماره 1</h4>
+                <img src="img/garsha.png" />
+                <hr color="#939291">
+                <h5>مبلغ : 300000 تومان</h5>
+                <button onclick="">مشاهده و خرید آلبوم <i class="fas fa-shopping-basket"></i></button>
+            </center>
+
+        </div>
+        <div class="detail">
+            <center><h4>آلبوم شماره 2</h4>
+                <img src="img/garsha.png" />
+                <hr color="#939291">
+                <h5>مبلغ : 400000 تومان</h5>
+                <button onclick="">مشاهده و خرید آلبوم <i class="fas fa-shopping-basket"></i></button>
+            </center>
+
+        </div>
+        <div class="detail">
+            <center><h4>آلبوم شماره 3</h4>
+                <img src="img/garsha.png" />
+                <hr color="#939291">
+                <h5>مبلغ : 500000 تومان</h5>
+                <button onclick="">مشاهده و خرید آلبوم <i class="fas fa-shopping-basket"></i></button>
+            </center>
+
+        </div>
+    </section></center>
+
+    <footer>
+        <div class="menu">
+            <ul class="links">
+                <b>لینک های مفید</b>
+                <li><a href="">صفحه اصلی</a></li>
+                <li><a href="">گالری</a></li>
+                <li><a href="">کانون هوادار</a></li>
+                <li><a href="">بیوگرافی</a></li>
+                <li><a href="">ارتباط با ما</a></li>
+                <li><a href="">آلبوم ها</a></li>
+            </ul>
+
+            <ul class="social">
+                <b>شبکه های اجتماعی</b>
+                <li><a><img src="img/twitter.png" alt="توییتر"></a></li>
+                <li><a><img src="img/instagram.png" alt="اینستاگرام"></a></li>
+                <li><a><img src="img/youtube.png" style="width: 45px;height: 45px" alt="یوتیوب"></a></li>
+                <li><a><img src="img/facebook.png" alt="فیسبوک"></a></li>
+            </ul>
+
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
